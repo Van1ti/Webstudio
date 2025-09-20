@@ -293,15 +293,6 @@
     margin-bottom: 50px;
 }
 
-.card {
-  color: #AFB1B8; /* default gray */
-  transition: color 0.3s, stroke 0.3s;
-  cursor: pointer;
-}
-
-.card:hover {
-  color: #1e90ff; /* hover blue */
-}
 .custommers_logo {
     display: flex;
     justify-content: space-between;
@@ -309,24 +300,33 @@
     gap: 30px;
 }
 
-.custommers_logo--svg {
-    transition: color 0.3s, stroke 0.3s;
+.logo {
+    display: inline-block;
     cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.custommers_logo--svg:hover {
+.logo:hover {
+    transform: scale(1.05);
+
+}
+
+.custommers_logo--svg:hover rect {
     stroke: rgba(33, 150, 243, 1);
-    fill: none;
-    clip-path: ;
+}
+
+.custommers_logo--svg:hover path {
+    stroke: rgba(33, 150, 243, 1);
+    fill: rgba(33, 150, 243, 1);
 }
 
 .footer {
     background-color: #2F303A;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100vh;
     height: 252px;
+    gap: 70px;
 }
 
 .footer_container {
@@ -360,4 +360,46 @@
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 3%;
+}
+
+.footer_box {}
+
+.footer_box--title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+
+.footer_box--logos {
+    width: 206px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+
+}
+
+.icon:hover rect {
+    stroke: rgba(33, 150, 243, 1);
+    fill: rgba(33, 150, 243, 1);
+}
+
+.icon-bg:hover  {
+    fill: rgba(33, 150, 243, 1);
+    fill-opacity: 0.1;
+    stroke: none;
 }
