@@ -60,7 +60,7 @@
     width: 100%;
     max-width: 387px;
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
     align-items: center;
 }
 
@@ -285,10 +285,96 @@
     margin-bottom: 30px;
 }
 
-.ourteam_container--card--logo:hover svg  {
+.ourteam_container--card--logo--svg1:hover {
     display: inline-block;
     cursor: pointer;
-    transition: transform 0.3s ease ;
+    transition: transform 2s ease;
+}
+
+.ourteam_container--card--logo--svg1:hover path {
+    display: inline-block;
+    cursor: pointer;
+    fill: rgba(33, 150, 243, 1);
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 1s;
+}
+
+
+.ourteam_container--card--logo--svg1:hover g path {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s ease;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
+}
+
+.ourteam_container--card--logo--svg2:hover {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 2s ease;
+}
+
+.ourteam_container--card--logo--svg2:hover path {
+    display: inline-block;
+    cursor: pointer;
+    fill: rgba(33, 150, 243, 1);
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 1s;
+}
+
+
+.ourteam_container--card--logo--svg2:hover g path {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s ease;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
+}
+
+.ourteam_container--card--logo--svg3:hover {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 2s ease;
+}
+
+.ourteam_container--card--logo--svg3:hover path {
+    display: inline-block;
+    cursor: pointer;
+    fill: rgba(33, 150, 243, 1);
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 1s;
+}
+
+
+.ourteam_container--card--logo--svg3:hover g path {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s ease;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
+}
+
+.ourteam_container--card--logo--svg4:hover {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 2s ease;
+}
+
+.ourteam_container--card--logo--svg4:hover path {
+    display: inline-block;
+    cursor: pointer;
+    fill: rgba(33, 150, 243, 1);
+    stroke: rgba(255, 255, 255, 1);
+    transition-duration: 1s;
+}
+
+
+.ourteam_container--card--logo--svg4:hover g path {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s ease;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(255, 255, 255, 1);
 }
 
 .custommers {
@@ -398,24 +484,76 @@
     align-items: center;
 }
 
-.icon {
+.icon1 {
     display: inline-block;
     cursor: pointer;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.icon:hover {
+.icon1:hover {
     transform: scale(1.05);
 
 }
 
-.icon:hover rect {
+.icon1:hover rect {
+    stroke: rgba(33, 150, 243, 1);
+    fill: rgba(33, 150, 243, 1);
+}
+
+
+.icon2 {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon2:hover {
+    transform: scale(1.05);
+
+}
+
+.icon2:hover rect {
+    stroke: rgba(33, 150, 243, 1);
+    fill: rgba(33, 150, 243, 1);
+}
+
+
+
+.icon3 {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon3:hover {
+    transform: scale(1.05);
+
+}
+
+.icon3:hover rect {
+    stroke: rgba(33, 150, 243, 1);
+    fill: rgba(33, 150, 243, 1);
+}
+
+
+.icon4 {
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.icon4:hover {
+    transform: scale(1.05);
+
+}
+
+.icon4:hover rect {
     stroke: rgba(33, 150, 243, 1);
     fill: rgba(33, 150, 243, 1);
 }
 
 .icon-bg:hover {
-    fill: rgba(33, 150, 243, 1);
-    fill-opacity: 0.1;
-    stroke: none;
+    fill: #2196F3;
+    stroke: #2196F3;
+    fill-opacity: initial;
 }
