@@ -31,7 +31,92 @@
             <div class="solution_container">
                 <h1 class="solution_container--title"> Ефективні рішення для вашого бізнесу</h1>
 
-                <button class="solution_container--button"> Замовити послуги</button>
+                <button class="solution_container--btn" id="openModal" class="btn">Замовити послугу</button>
+
+                <!-- Оверлей + модальное окно -->
+                <div id="overlay" class="overlay" aria-hidden="true">
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                        <div class="modal__header">
+                            <button id="closeModal" class="modal__close" aria-label="Закрыть">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="15" cy="15" r="15" fill="white" />
+                                    <circle cx="15" cy="15" r="14.5" stroke="black" stroke-opacity="0.1" />
+                                    <path
+                                        d="M21 10.1079L19.8921 9L15.5 13.3921L11.1079 9L10 10.1079L14.3921 14.5L10 18.8921L11.1079 20L15.5 15.6079L19.8921 20L21 18.8921L16.6079 14.5L21 10.1079Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="modal__body">
+                            <h3 class="modal__body--title">Залиште свої дані, ми вам передзвонимо</h3>
+                            <form class="modal__body--form" action="/submit" method="post">
+
+                                <div class="modal__body--form--name">
+                                    <label for="name">Ім'я</label><br>
+                                    <div class="modal__body--form--name--inp">
+                                        <svg class="modal__body--form--name--inp1" width="12" height="12"
+                                            viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6 6C7.6575 6 9 4.6575 9 3C9 1.3425 7.6575 0 6 0C4.3425 0 3 1.3425 3 3C3 4.6575 4.3425 6 6 6ZM6 7.5C3.9975 7.5 0 8.505 0 10.5V11.25C0 11.6625 0.3375 12 0.75 12H11.25C11.6625 12 12 11.6625 12 11.25V10.5C12 8.505 8.0025 7.5 6 7.5Z"
+                                                fill="#212121" />
+                                        </svg>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                </div>
+
+                                <div class="modal__body--form--phone">
+                                    <label for="telefon">Телефон</label><br>
+                                    <div class="modal__body--form--phone--inp">
+                                        <svg class="modal__body--form--phone--inp2" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.996 9.12261L10.1579 8.91275C9.71644 8.86209 9.28224 9.01406 8.97105 9.32524L7.63948 10.6568C5.59147 9.61472 3.91254 7.94301 2.87044 5.88775L4.20925 4.54894C4.52043 4.23775 4.6724 3.80355 4.62174 3.3621L4.41188 1.53842C4.32504 0.807499 3.70991 0.2575 2.97176 0.2575H1.71979C0.902035 0.2575 0.221776 0.937761 0.272434 1.75552C0.655984 7.93577 5.59871 12.8713 11.7717 13.2548C12.5894 13.3055 13.2697 12.6252 13.2697 11.8075V10.5555C13.2769 9.82459 12.7269 9.20946 11.996 9.12261Z"
+                                                fill="#212121" />
+                                        </svg>
+                                        <input type="text" id="telefon" name="telefon" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="modal__body--form--email">
+                                    <label for="email">Пошта</label><br>
+                                    <div class="modal__body--form--email--inp">
+                                        <svg class="modal__body--form--email--inp3" width="16" height="12"
+                                            viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 0H2C1.175 0 0.5075 0.675 0.5075 1.5L0.5 10.5C0.5 11.325 1.175 12 2 12H14C14.825 12 15.5 11.325 15.5 10.5V1.5C15.5 0.675 14.825 0 14 0ZM13.7 3.1875L8.3975 6.5025C8.1575 6.6525 7.8425 6.6525 7.6025 6.5025L2.3 3.1875C2.1125 3.0675 2 2.865 2 2.6475C2 2.145 2.5475 1.845 2.975 2.1075L8 5.25L13.025 2.1075C13.4525 1.845 14 2.145 14 2.6475C14 2.865 13.8875 3.0675 13.7 3.1875Z"
+                                                fill="#212121" />
+                                        </svg>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="modal__body--form--comment">
+                                    <label for="comments">Коментар</label><br>
+                                    <textarea id="comments" name="comments" placeholder="Введіть текст"></textarea>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal__footer">
+                            <div class="modal__footer--rights">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z"
+                                        fill="#212121" />
+                                </svg>
+                                <p>Погоджуюся з розсилкою та приймаю <span>Умови договору</span></p>
+                            </div>
+                            <button class="modal__footer--btn" id="okBtn">Відправити</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script src="script.js" defer></script>
             </div>
         </section>
         <section class="info">
@@ -71,15 +156,15 @@
                 <div class="whatWEDO_container--box">
                     <img src="./img/photo_2.jpg" alt="whatWEDO=photo">
                     <div class="label1">Десктопні додатки</div>
-                </div>     
+                </div>
                 <div class="whatWEDO_container--box">
                     <img src="./img/photo_3.jpg" alt="whatWEDO=photo">
                     <div class="label2">Мобільні додатки</div>
-                </div>    
+                </div>
                 <div class="whatWEDO_container--box">
                     <img src="./img/photo_1.jpg" alt="whatWEDO=photo">
                     <div class="label3">Дизайнерські рішення</div>
-                </div>    
+                </div>
             </div>
         </section>
 

@@ -123,7 +123,8 @@
     color: #F5F4FA;
 }
 
-.solution_container--button {
+
+.solution_container--btn {
     background-color: #2196F3;
     width: 216;
     height: 50;
@@ -136,6 +137,334 @@
     padding: 10px 32px 10px 32px;
     margin-top: 40px;
     box-shadow: 0px 4px 4px 0px #00000026;
+    cursor: pointer;
+}
+
+
+.modal__body--form--name--inp input,
+.modal__body--form--phone--inp input,
+.modal__body--form--email--inp input {
+    padding-left: 35px;
+}
+
+
+.modal__body--form--name--inp input:focus,
+.modal__body--form--phone--inp input:focus,
+.modal__body--form--email--inp input:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+
+.modal__body--form--name--inp:focus-within svg path,
+.modal__body--form--phone--inp:focus-within svg path,
+.modal__body--form--email--inp:focus-within svg path {
+    fill: #2196F3;
+}
+
+:root {
+    --blue: #1f75fe;
+}
+
+
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 0;
+
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: 0;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+.btn--secondary {
+    background: #eaeaea;
+    color: #111;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.modal {
+    width: 100%;
+    max-width: 528px;
+    height: 581px;
+    border-radius: 4px;
+
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+    background: #FFFFFF;
+}
+
+
+
+.modal__body--title {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    color: rgba(33, 33, 33, 1);
+    width: 448px;
+    text-align: center;
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+.modal__close {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-left: 482px;
+    margin-top: 8px;
+}
+
+.modal__close path:hover {
+    fill: #1f75fe;
+}
+
+.modal__body {
+    margin: 12px 0 16px;
+}
+
+.modal__body--form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__body--form--name label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 4px;
+}
+
+.modal__body--form--phone label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 4px;
+}
+
+.modal__body--form--email label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 4px;
+}
+
+.modal__body--form--name--inp {
+    position: relative;
+}
+
+.modal__body--form--phone--inp {
+    position: relative;
+}
+
+.modal__body--form--email--inp {
+    position: relative;
+}
+
+.modal__body--form--name--inp1 {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    fill: #666;
+}
+
+.modal__body--form--phone--inp2 {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    fill: #666;
+}
+
+.modal__body--form--email--inp3 {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    fill: #666;
+}
+
+.modal__body--form--email:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modal__body--form--email--inp3 path:focus {
+    fill: #2196F3;
+}
+
+.modal__body--form--name input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal__body--form--phone input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal__body--form--email input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    fill: #212121;
+}
+
+svg path {
+    transition: fill 0.3s ease;
+}
+
+input {
+    transition: border-color 0.3s ease;
+}
+
+.modal__body--form--comment label {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 4px;
+}
+
+.modal__body--form--comment textarea {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: rgba(117, 117, 117, 0.5);
+    width: 448px;
+    height: 120px;
+    padding: 15px 0 0 15px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal__body--form--name input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modal__body--form--phone input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.modal__body--form--email input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.modal__body--form--comment textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modal__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.modal__footer svg {
+    cursor: pointer;
+}
+
+.modal__footer--rights svg:hover {
+    background-image: url(./img/icon\ check.svg);
+}
+
+.modal__footer--rights {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 30px;
+    color: rgba(117, 117, 117, 1);
+}
+
+.modal__footer--rights span {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 3%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    color: #1f75fe;
+    cursor: pointer;
+}
+
+.modal__footer--btn {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 6%;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 1);
+
+    background-color: rgba(33, 150, 243, 1);
+    padding: 10px 52px 10px 52px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal__footer--btn:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
 }
 
 .info_container {
@@ -238,6 +567,7 @@
     background-color: rgba(47, 48, 58, 0.8);
     padding: 27px 101px 27px 100px;
 }
+
 .label2 {
     position: absolute;
     left: 0;
@@ -253,6 +583,7 @@
     background-color: rgba(47, 48, 58, 0.8);
     padding: 27px 107.5px 27px 105px;
 }
+
 .label3 {
     position: absolute;
     left: 0;
