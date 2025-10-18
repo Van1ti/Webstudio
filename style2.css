@@ -52,6 +52,46 @@
 
 }
 
+.header_container_nav_link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    color: #212121;
+    line-height: 100%;
+    letter-spacing: 2%;
+
+    position: relative;
+    transition: color 0.3s;
+}
+
+.header_container_nav_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 0;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.header_container_nav_link:hover {
+    color: #2196f3;
+}
+
+.header_container_nav_link:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: #2196f3;
+}
+
+.active::after {
+    width: 100%;
+}
+
 .header_container_nav_link:hover {
     color: #2196F3;
 }
@@ -65,6 +105,18 @@
 }
 
 .header_content--email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content--phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content--email a {
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
@@ -75,10 +127,26 @@
 }
 
 .header_content--email:hover {
-    color: #2196F3;
+    svg {
+        fill:#2196F3 ;
+    }
+
+    a {
+        color: #2196f3;
+    }
 }
 
-.header_content--phone {
+.header_content--phone:hover {
+    svg path {
+        fill:#2196F3 ;
+    }
+
+    a {
+        color: #2196f3;
+    }
+}
+
+.header_content--phone a {
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
@@ -86,10 +154,6 @@
     letter-spacing: 2%;
     color: #757575;
     text-decoration: none;
-}
-
-.header_content--phone:hover {
-    color: #2196F3;
 }
 
 .full-line {
@@ -229,7 +293,7 @@
     padding-top: 20px;
 }
 
-.footer_container_adress:hover{
+.footer_container_adress:hover {
     color: #2196F3;
     transition-duration: 0.5s;
     cursor: pointer;
@@ -244,7 +308,7 @@
     letter-spacing: 3%;
 }
 
-.footer_container_adress--media:hover{
+.footer_container_adress--media:hover {
     color: #2196F3;
     transition-duration: 0.5s;
     cursor: pointer;

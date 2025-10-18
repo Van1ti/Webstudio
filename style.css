@@ -42,6 +42,43 @@
 }
 
 .header_container_nav_link {
+    text-decoration: none;
+    color: #222;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.header_container_nav_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 0;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.header_container_nav_link:hover {
+    color: #2196f3;
+}
+
+.header_container_nav_link:hover::after {
+    width: 100%;
+}
+
+.active {
+    color: #2196f3;
+}
+
+.active::after {
+    width: 100%;
+}
+
+.header_container_nav_link {
     color: #212121;
     font-family: Roboto;
     font-weight: 500;
@@ -52,12 +89,6 @@
     transition: transform 0.5s ease;
 }
 
-.header_container_nav_link:hover {
-    transform: cubic-bezier(.17, .67, 1, -0.55);
-    color: #2196F3;
-
-    border-bottom: 2px solid #2196F3;
-}
 
 .header_content {
     width: 100%;
@@ -68,6 +99,18 @@
 }
 
 .header_content--email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content--phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header_content--email a {
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
@@ -78,10 +121,26 @@
 }
 
 .header_content--email:hover {
-    color: #2196F3;
+    svg {
+        fill: #2196F3;
+    }
+
+    a {
+        color: #2196f3;
+    }
 }
 
-.header_content--phone {
+.header_content--phone:hover {
+    svg path {
+        fill: #2196F3;
+    }
+
+    a {
+        color: #2196f3;
+    }
+}
+
+.header_content--phone a {
     font-family: Roboto;
     font-weight: 500;
     font-size: 14px;
@@ -91,9 +150,6 @@
     text-decoration: none;
 }
 
-.header_content--phone:hover {
-    color: #2196F3;
-}
 
 .solution {
     width: 100%;
@@ -683,7 +739,7 @@ input {
 .ourteam_container--card--logo--svg1:hover {
     display: inline-block;
     cursor: pointer;
-    transition: transform 2s ease;
+    transition: transform 0.5s ease;
 }
 
 .ourteam_container--card--logo--svg1:hover path {
@@ -691,14 +747,14 @@ input {
     cursor: pointer;
     fill: rgba(33, 150, 243, 1);
     stroke: rgba(255, 255, 255, 1);
-    transition-duration: 1s;
+    transition: transform 0.5s ease;
 }
 
 
 .ourteam_container--card--logo--svg1:hover g path {
     display: inline-block;
     cursor: pointer;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
     fill: rgba(255, 255, 255, 1);
     stroke: rgba(255, 255, 255, 1);
 }
@@ -706,53 +762,48 @@ input {
 .ourteam_container--card--logo--svg2:hover {
     display: inline-block;
     cursor: pointer;
-    transition: transform 2s ease;
+    transition: transform 0.5s ease;
+
+    path {
+        fill: white;
+        stroke: rgba(255, 255, 255, 1);
+    }
+
 }
 
-.ourteam_container--card--logo--svg2:hover path {
+.ourteam_container--card--logo--svg2 path:hover {
     display: inline-block;
     cursor: pointer;
     fill: rgba(33, 150, 243, 1);
     stroke: rgba(255, 255, 255, 1);
-    transition-duration: 1s;
+    transition: transform 0.5s ease;
 }
 
-
-.ourteam_container--card--logo--svg2:hover g path {
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 1s ease;
-    fill: rgba(255, 255, 255, 1);
-    stroke: rgba(255, 255, 255, 1);
-}
 
 .ourteam_container--card--logo--svg3:hover {
     display: inline-block;
     cursor: pointer;
-    transition: transform 2s ease;
+    transition: transform 0.5s ease;
+
+    path {
+        fill: #fff;
+        stroke: #fff;
+    }
 }
 
-.ourteam_container--card--logo--svg3:hover path {
+.ourteam_container--card--logo--svg3 path:hover {
     display: inline-block;
     cursor: pointer;
     fill: rgba(33, 150, 243, 1);
     stroke: rgba(255, 255, 255, 1);
-    transition-duration: 1s;
+    transition: transform 0.5s ease;
 }
 
-
-.ourteam_container--card--logo--svg3:hover g path {
-    display: inline-block;
-    cursor: pointer;
-    transition: transform 1s ease;
-    fill: rgba(255, 255, 255, 1);
-    stroke: rgba(255, 255, 255, 1);
-}
 
 .ourteam_container--card--logo--svg4:hover {
     display: inline-block;
     cursor: pointer;
-    transition: transform 2s ease;
+    transition: transform 0.5s ease;
 }
 
 .ourteam_container--card--logo--svg4:hover path {
@@ -760,14 +811,14 @@ input {
     cursor: pointer;
     fill: rgba(33, 150, 243, 1);
     stroke: rgba(255, 255, 255, 1);
-    transition-duration: 1s;
+    transition: transform 0.5s ease;
 }
 
 
 .ourteam_container--card--logo--svg4:hover g path {
     display: inline-block;
     cursor: pointer;
-    transition: transform 1s ease;
+    transition: transform 0.5s ease;
     fill: rgba(255, 255, 255, 1);
     stroke: rgba(255, 255, 255, 1);
 }
@@ -800,7 +851,7 @@ input {
 .logo {
     display: inline-block;
     cursor: pointer;
-    transition: transform 0.3s ease, ;
+    transition: transform 0.5s ease ;
 }
 
 .logo:hover {
@@ -851,7 +902,7 @@ input {
     padding-top: 20px;
 }
 
-.footer_container_adress:hover{
+.footer_container_adress:hover {
     color: #2196F3;
     transition-duration: 0.5s;
     cursor: pointer;
@@ -866,7 +917,7 @@ input {
     letter-spacing: 3%;
 }
 
-.footer_container_adress--media:hover{
+.footer_container_adress--media:hover {
     color: #2196F3;
     transition-duration: 0.5s;
     cursor: pointer;
