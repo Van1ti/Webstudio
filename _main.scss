@@ -51,15 +51,11 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    text-align: center;
     padding-top: 94px;
     padding-bottom: 94px;
 
     &--cart {
-        padding-left: 20px;
-
-        &_title {
-            color: #212121;
+        &--title {
             font-family: Roboto;
             font-weight: 700;
             font-size: 14px;
@@ -68,18 +64,19 @@
             text-transform: uppercase;
             text-align: left;
             margin-top: 30px;
+            margin-bottom: 10px;
         }
 
-        &_text {
+        &--text {
+            width: 100%;
             color: #757575;
-            padding-top: 10px;
             font-family: Roboto;
             font-weight: 400;
             font-size: 14px;
             line-height: 24px;
             letter-spacing: 3%;
-            text-align: left;
-            width: 270px;
+            max-width: 270px;
+            color: #757575;
         }
     }
 }
