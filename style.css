@@ -217,7 +217,6 @@
   z-index: 10;
   position: relative;
   width: 350px;
-  border-radius: 20px;
   overflow: hidden;
 }
 .whatWEDO_container--box img {
@@ -773,17 +772,18 @@ input {
 
 .footer {
   background-color: #2F303A;
-  display: flex;
-  align-items: first baseline;
-  height: 100vh;
-  height: 252px;
-  gap: 70px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
-.footer_container {
-  margin-left: 365px;
+.footer_info {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-.footer_container_title {
+.footer_info--container_title {
   color: #FFFFFF;
   font-family: Raleway;
   font-weight: 700;
@@ -792,7 +792,7 @@ input {
   letter-spacing: 3%;
   margin-top: 60px;
 }
-.footer_container_adress {
+.footer_info--container--adress {
   color: #F5F4FA;
   font-family: Roboto;
   font-weight: 400;
@@ -801,7 +801,7 @@ input {
   letter-spacing: 3%;
   padding-top: 20px;
 }
-.footer_container_adress--media {
+.footer_info--container--adress--media {
   color: #757575;
   font-family: Roboto;
   font-weight: 400;
@@ -809,17 +809,17 @@ input {
   line-height: 24px;
   letter-spacing: 3%;
 }
-.footer_container_adress--media:hover {
+.footer_info--container--adress--media:hover {
   color: #2196F3;
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.footer_container_adress:hover {
+.footer_info--container--adress:hover {
   color: #2196F3;
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.footer_box--title {
+.footer_info--box--title {
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -829,17 +829,17 @@ input {
   color: rgb(255, 255, 255);
   margin-bottom: 20px;
 }
-.footer_box--logos {
+.footer_info--box--logos {
   width: 206px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.footer__subscribe {
+.footer_info--subscribe {
   width: 100%;
   max-width: 570px;
 }
-.footer__subscribe--title {
+.footer_info--subscribe--title {
   margin-bottom: 20px;
   font-family: Roboto;
   font-weight: 700;
@@ -849,12 +849,12 @@ input {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.footer__subscribe--box {
+.footer_info--subscribe--box {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.footer__subscribe--box input {
+.footer_info--subscribe--box input {
   width: 358px;
   border-radius: 4px;
   box-shadow: none;
@@ -862,7 +862,7 @@ input {
   background-color: #2F303A;
   padding: 15px 295px 15px 16px;
 }
-.footer__subscribe--box--btn {
+.footer_info--subscribe--box--btn {
   display: flex;
   align-items: center;
   background-color: #2196F3;
@@ -872,7 +872,7 @@ input {
   width: 200px;
   cursor: pointer;
 }
-.footer__subscribe--box--btn p {
+.footer_info--subscribe--box--btn p {
   font-family: Roboto;
   font-weight: 700;
   font-size: 16px;
@@ -883,7 +883,7 @@ input {
   color: #FFFFFF;
   padding: 10px 10px 10px 28px;
 }
-.footer__subscribe--box--btn img {
+.footer_info--subscribe--box--btn img {
   padding-right: 28px;
 }
 
