@@ -12,66 +12,71 @@
     align-items: baseline;
 
     &--container {
+      display: flex;
+      gap: 70px;
+      align-items: baseline;
+      &--card {
 
-      &_title {
-        color: #FFFFFF;
-        font-family: Raleway;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 100%;
-        letter-spacing: 3%;
-        margin-top: 60px;
-      }
+        &_title {
+          color: #FFFFFF;
+          font-family: Raleway;
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 100%;
+          letter-spacing: 3%;
+          margin-top: 60px;
+        }
 
-      &--adress {
-        color: #F5F4FA;
-        font-family: Roboto;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 3%;
-        padding-top: 20px;
-
-        &--media {
-          color: #757575;
+        &--adress {
+          color: #F5F4FA;
           font-family: Roboto;
           font-weight: 400;
           font-size: 14px;
           line-height: 24px;
           letter-spacing: 3%;
+          padding-top: 20px;
+
+          &--media {
+            color: #757575;
+            font-family: Roboto;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 3%;
+          }
+
+          &--media:hover {
+            color: #2196F3;
+            transition-duration: 0.5s;
+            cursor: pointer;
+          }
         }
 
-        &--media:hover {
+        &--adress:hover {
           color: #2196F3;
           transition-duration: 0.5s;
           cursor: pointer;
         }
       }
 
-      &--adress:hover {
-        color: #2196F3;
-        transition-duration: 0.5s;
-        cursor: pointer;
-      }
-    }
+      &--box {
+        &--title {
+          font-family: Roboto;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 3%;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 1);
+          margin-bottom: 20px;
+        }
 
-    &--box {
-      &--title {
-        font-family: Roboto;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 100%;
-        letter-spacing: 3%;
-        text-transform: uppercase;
-        color: rgba(255, 255, 255, 1);
-        margin-bottom: 20px;
-      }
-
-      &--logos {
-        width: 206px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        &--logos {
+          width: 206px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
       }
     }
 

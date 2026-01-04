@@ -347,31 +347,31 @@
         margin-bottom: 50px;
     }
 
-    &_logo {
+    &_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
 
-        &--svg:hover rect {
-            stroke: rgba(33, 150, 243, 1);
+        &--logo {
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+
+            &--svg:hover rect {
+                stroke: rgba(33, 150, 243, 1);
+            }
+
+            &--svg:hover path {
+                stroke: rgba(33, 150, 243, 1);
+                fill: rgba(33, 150, 243, 1);
+            }
         }
 
-        &--svg:hover path {
-            stroke: rgba(33, 150, 243, 1);
-            fill: rgba(33, 150, 243, 1);
+        &--logo:hover {
+            transform: scale(1.05);
+
         }
-    }
-
-    .logo {
-        display: inline-block;
-        cursor: pointer;
-        transition: transform 0.5s ease;
-    }
-
-    .logo:hover {
-        transform: scale(1.05);
-
     }
 
 }
