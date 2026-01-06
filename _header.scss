@@ -8,6 +8,20 @@
     padding-top: 25px;
     padding-bottom: 25px;
 
+    &_burger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+
+        span {
+            width: 26px;
+            height: 3px;
+            background: #212121;
+            border-radius: 2px;
+        }
+    }
+
     &_container {
         width: 100%;
         max-width: 520px;
@@ -143,4 +157,110 @@
 
     }
 
+}
+
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    z-index: 100;
+    padding-left: 40px;
+    padding-bottom: 48px;
+
+    &_socials {
+        margin-top: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        a {
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 2%;
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        span {
+            width: 1px;
+            height: 20px;
+            background: rgba(33, 33, 33, 0.2);
+        }
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    &_close {
+        align-self: flex-end;
+        font-size: 26px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 25px;
+        margin-top: 21px;
+    }
+
+    &_close:hover {
+        color: #2196F3;
+    }
+
+    &_nav {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        a {
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 100%;
+            letter-spacing: 2%;
+            color: #212121;
+            transition-duration: 0.3s;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #2196F3;
+        }
+    }
+
+    &_contacts {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .phone {
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 100%;
+            letter-spacing: 2%;
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        a {
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 2%;
+            color: #757575;
+            text-decoration: none;
+        }
+    }
 }

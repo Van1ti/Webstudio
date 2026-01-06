@@ -37,3 +37,17 @@ document.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+
+
+const burger = document.querySelector('.header_burger');
+const menu = document.querySelector('.mobile-menu');
+const close = document.querySelector('.mobile-menu_close');
+
+burger.addEventListener('click', () => {
+    menu.classList.add('active');
+});
+
+close.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
